@@ -12,4 +12,7 @@ export default {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+  body {
+    background-color: #f9fffb !important;
+  }
 </style>

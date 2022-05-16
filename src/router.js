@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from './components/HomePage'
-import About from './components/About'
+import ContactMe from './components/ContactMe'
+import MyProjects from './components/MyProjects'
 
 
 Vue.use(Router)
@@ -14,9 +15,14 @@ export default new Router({
         component: HomePage
     },
     {
-      path: '/about',
-      name: 'About',
-      component: About
+      path: '/contact-me',
+      name: 'ContactMe',
+      component: ContactMe
+    },
+    {
+      path: '/projects',
+      name: 'Projects',
+      component: MyProjects
     }
   ]
 })

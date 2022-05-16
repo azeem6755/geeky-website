@@ -1,8 +1,11 @@
 <template>
     <div class="navigation-div">
-        <b-nav>
-            <b-nav-item to="/" style="float: left;">Azeem Shaikh</b-nav-item>
-            <b-nav-item to="/about" class="navigation-item" style="float: right;">About me</b-nav-item>
+        <div class="go-home-div button-transparent">
+            <a href="/" class="home-text">Azeem Shaikh</a>
+        </div>
+        <b-nav class="navigation">
+            <b-nav-item to="/projects" class="navigation-item">Projects</b-nav-item>
+            <b-nav-item to="/contact-me" class="navigation-item">Contact Me</b-nav-item>
         </b-nav>
     </div>
 </template>
@@ -15,8 +18,9 @@ export default {
 
 <style scoped>
     .navigation-div{
-      border-bottom: 1px solid gray;
-      padding: 0.75em;
+        display: flex;
+        border-bottom: 1px solid gray;
+        justify-content: space-between;
     }
 
     .navigation-item {
@@ -25,5 +29,43 @@ export default {
         font-size: 0.75rem;
         text-transform: uppercase;
         padding: 1em 0;
+        color: rgb(46, 46, 46) !important;
+    }
+
+    .navigation-item .nav-link {
+        color: rgb(46, 46, 46)
+    }
+
+    .home-text {
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: rgb(46, 46, 46);
+        padding: 1em 0.5em;
+        transition: color 300ms ease-in-out;
+    }
+
+    .home-text:hover {
+        color: rgb(4, 138, 161)
+    }
+
+    .go-home-div {
+        padding: 0.75em 0;
+    }
+
+    .button-transparent {
+        background-color: transparent;
+        border: 1px solid transparent;
+        transition: box-shadow,background-color 300ms ease-in-out;
+        border-radius: 0px;
+    }
+
+    .button-transparent:hover {
+        color: rgb(15, 101, 230);
+        background-color: #abd3f5;
+        border-radius: 3px;
+        cursor: pointer
     }
 </style>
