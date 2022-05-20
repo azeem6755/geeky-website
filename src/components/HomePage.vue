@@ -5,7 +5,7 @@
             <div>
                 <img src="@/assets/azeem-avatar.png" class=" border bg-white p1 border-light-gray circle square-150 lazyloaded change"/>
                 <h1 class="titles">Azeem Shaikh</h1>
-                <p class="sub-text body-font gray mt-0 h3 regular">Software Engineer, Reader, Gamer, Traveller</p>
+                <p class="sub-text body-font gray mt-0 h3 regular">Software Engineer, Reader, Gamer</p>
             </div>
         </section>
         <section name="about-me" class="about-me">
@@ -18,11 +18,11 @@
                         <div class="about-me-text">
                             Hi, I am Azeem Shaikh. I am a Full Stack Engineer working with Django and Vue.
                             I love solving problems, traveling, reading, and going on long walks. 
-                            I have spent the past two years creating pipelines for report generation and a web dev project here and there.
-                            I am currently learning AWS, and this will be deployed using AWS Amplify.
+                            I have spent the past two years creating pipelines for report generation and a few web dev projects.
+                            I am currently learning AWS, this and all further projects will be deployed via AWS.
                         </div>
                     </b-col>
-                    <b-col class="contact-div" md="4" cols="12">
+                    <b-col class="contact-div" offset-md="2" md="4" cols="12">
                         <div class="contact-title mb2">
                             <h3>Contact</h3>
                         </div>
@@ -115,15 +115,24 @@ export default {
         font-size: 1.5em;
         font-weight: 700;
     }
-    
-
-    .contact-div {
-        margin-left: 5em;
-    }
 
     .contact-items {
         display: flex;
         flex-direction: column;
+    }
+
+    @media screen and (max-width: 586px) {
+        .contact-items {
+            flex-direction: row;
+        }
+
+        .about-me {
+            margin-bottom: 2em;
+        }
+
+        .contact-div {
+            margin-top: 2em;
+        }
     }
 
     .contact {

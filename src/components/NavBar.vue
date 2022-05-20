@@ -7,6 +7,11 @@
             <b-nav-item to="/projects" class="navigation-item">Projects</b-nav-item>
             <b-nav-item to="/contact-me" class="navigation-item">Contact Me</b-nav-item>
         </b-nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </div>
 </template>
 
@@ -67,5 +72,30 @@ export default {
         background-color: #abd3f5;
         border-radius: 3px;
         cursor: pointer
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+    }
+
+    @media screen and (max-width: 586px) {
+        .navigation {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+            
+        }
     }
 </style>
